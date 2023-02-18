@@ -1,0 +1,22 @@
+Name : Complex
+
+on: push
+
+jobs:
+ubuntu:
+runs-on:ubunutu-latest
+ steps
+ -run: date
+ windows:
+runs-on: window-latest
+ steps
+ -run: date
+macos:
+runs-on: macos-latest
+ steps
+ -run: date
+depnds:
+needs: [ubuntu,windows,macos]
+runs-on: macos-latest
+steps
+-run: date
